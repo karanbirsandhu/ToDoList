@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do list</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <div class="box" id="heading">
+        <h1 style="color: black"><%=day%></h1>
+      </div>
+    <div class="box" id="heading">
+      <h2 >To Do List !</h2>
+    </div>
+    <div class="box">
+      <% for(let el of todo) {%>
+      <div class="item">
+        <input type="checkbox" name="" id="todo-checkbox" />
+        <p><%= el %></p>
+    </div>
+        <% }; %>
+     
+      <form class="item" action="/" method="post">
+        <label for="input1"></label>
+        <input type="text" name="todo" id="input1" placeholder="Next To do" />
+        <button type="submit">+</button>
+      </form>
+    </div>
+  </body>
+</html>
