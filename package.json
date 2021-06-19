@@ -12,6 +12,9 @@
   },
   "author": "karanbir singh",
   "license": "ISC",
+  "engines": {
+    "node": "14.x"
+  },
   "bugs": {
     "url": "https://github.com/karanbirsandhu/todolist/issues"
   },
