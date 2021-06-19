@@ -7,17 +7,29 @@
     <h2>To Do List !</h2>
   </div>
   <div class="box">
-    <% for(let el of todo) {%>
-    <div class="item">
-      <input type="checkbox" name="" id="todo-checkbox" />
-      <p><%= el %></p>
-    </div>
-    <% }; %>
 
-    <form class="item" action="/" method="post">
+    
+
+   
+
+
+    
+    
+    <% todo.forEach(element=>{%>
+
+      <form action="/del" method="post">
+    <div class="item">
+      <input type="checkbox" onChange="this.form.submit()" name="del" value="<%=element._id%>" id="todo-checkbox" />
+      <p><%= element.name %></p>
+    </div>
+    <input type="hidden" name="listName"  value="<%=day%>">
+  </form>
+    <% }); %>
+
+    <form class="item" action="/<%= day %> " method="post">
       <label for="input1"></label>
       <input type="text" name="todo" id="input1" placeholder="Next To do" />
-      <button type="submit" name="btn" value="<%=day%>">+</button>
+      <button type="submit" name="btn" value=<%=day%>>+</button>
     </form>
   </div>
 </body>
